@@ -1,0 +1,25 @@
+/*
+ * Project: quick-java-check
+ * Author: Marco Faustinelli - Muzietto (contacts@faustinelli.net)
+ * Web: http://faustinelli.wordpress.com/, http://www.github.com/muzietto, http://faustinelli.net/
+ * Version: 0.1
+ * The GPL 3.0 License - Copyright (c) 2016 - The quick-java-check Project
+ */
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+apply plugin: 'application'
+mainClassName = 'net.faustinelli.earthquakes.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+    compile 'com.pholser:junit-quickcheck-core:0.6'
+    compile 'com.pholser:junit-quickcheck-generators:0.6'
+}
