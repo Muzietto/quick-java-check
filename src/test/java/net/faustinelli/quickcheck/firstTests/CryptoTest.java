@@ -17,14 +17,26 @@ public class CryptoTest extends TestCase{
     public void testEncrypt() throws Exception {
 
         byte[] bytes = new Crypto().encrypt("test".getBytes(), "key");
-        assertEquals("testkey", new String(bytes));
-        assertEquals(7, bytes.length);
+        assertEquals("test"/*"testkey"*/, new String(bytes));
+        assertEquals(4/*7*/, bytes.length);
     }
 
     public void testDecrypt() throws Exception {
-        byte[] encrypted = "testkey".getBytes();
+        byte[] encrypted = "test"/*"testkey"*/.getBytes();
         byte[] bytes = new Crypto().decrypt(encrypted, "key");
         assertEquals("test", new String(bytes));
         assertEquals(4, bytes.length);
+    }
+
+    public void testCryptDecrypt() throws Exception {
+        Crypto cricri = new Crypto();
+        String sss = "testtesttesttesttesttesttesttest";
+        String keyo = "enricoenricoenricoenricoenricoenrico";
+        byte[] encrypted = cricri.encrypt(sss.getBytes(), keyo);
+        byte[] decrypted = cricri.decrypt(encrypted, keyo);
+
+        assertEquals(sss, new String(decrypted));
+
+
     }
 }

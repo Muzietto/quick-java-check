@@ -20,8 +20,9 @@ import static org.junit.Assert.assertEquals;
  */
 @RunWith(JUnitQuickcheck.class)
 public class SymmetricKeyCryptographyProperties {
-    @Property
-    public void decryptReversesEncrypt(Crypto.Bytes bytes, String key)
+
+    @Property(shrink = false)
+    public void decryptReversesEncrypt(@From(CryptoBytesGenerator.class)Crypto.Bytes bytes, String key)
             throws Exception {
 
         Crypto crypto = new Crypto();
@@ -30,9 +31,12 @@ public class SymmetricKeyCryptographyProperties {
                 crypto.encrypt(bytes.getBytes(), key);
 
         assertEquals(
-                bytes,
-                crypto.decrypt(ciphertext, key));
+                bytes2String(bytes),
+                new String(crypto.decrypt(ciphertext, key)));
     }
 
+    private String bytes2String(Crypto.Bytes bytes) {
+        return new String(bytes.getBytes());
+    }
 
 }
