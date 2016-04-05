@@ -22,17 +22,17 @@ import static org.junit.Assert.assertEquals;
 public class SymmetricKeyCryptographyProperties {
 
     @Property(shrink = false)
-    public void decryptReversesEncrypt(@From(CryptoBytesGenerator.class)Crypto.Bytes bytes, String key)
+    public void decryptReversesEncrypt(@From(CryptoBytesGenerator.class)Crypto.Bytes bytes, @From(CryptoBytesGenerator.class)Crypto.Bytes keybits)
             throws Exception {
 
         Crypto crypto = new Crypto();
 
         byte[] ciphertext =
-                crypto.encrypt(bytes.getBytes(), key);
+                crypto.encrypt(bytes.getBytes(), new String(keybits.getBytes()));
 
         assertEquals(
                 bytes2String(bytes),
-                new String(crypto.decrypt(ciphertext, key)));
+                new String(crypto.decrypt(ciphertext, new String(keybits.getBytes()))));
     }
 
     private String bytes2String(Crypto.Bytes bytes) {
