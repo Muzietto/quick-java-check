@@ -16,11 +16,11 @@ import java.util.Arrays;
  */
 public class Crypto {
     byte[] encrypt(byte[] plaintext, String key) throws UnsupportedEncodingException {
-        return (new String(plaintext)/* + key*/).getBytes("UTF-8");
+        return (new String(plaintext) + key).getBytes("UTF-8");
     }
 
     byte[] decrypt(byte[] ciphertext, String key) throws UnsupportedEncodingException {
-        return new String(ciphertext).substring(0, ciphertext.length /*- key.length()*/).getBytes("UTF-8");
+        return new String(ciphertext).substring(0, ciphertext.length - key.length()).getBytes("UTF-8");
     }
 
     public static class Bytes {
