@@ -32,9 +32,10 @@ public class CryptoBytesGenerator extends Generator<Crypto.Bytes> {
 
     @Override
     public Crypto.Bytes generate(SourceOfRandomness random, GenerationStatus status) {
+
         Crypto.Bytes result = null;
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < 200000000; i++) {
+        for (int i = 0; i < 20; i++) {
             int randomIndex = random.nextInt(ALL_MY_CHARS.length());
             sb.append(ALL_MY_CHARS.charAt(randomIndex));
         }
