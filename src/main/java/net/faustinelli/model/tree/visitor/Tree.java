@@ -12,4 +12,10 @@ package net.faustinelli.model.tree.visitor;
  * Created by Marco Faustinelli (Muzietto) on 04/04/2016.
  */
 public interface Tree extends Visited<TreeVisitor> {
+    static final String LOWERCASE_CHARS = "abcdefghijklmnopqrstuvwxyz";
+    static final String UPPERCASE_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    static final String NUMBERS = "0123456789";
+    static final String ALL_MY_CHARS = LOWERCASE_CHARS
+            + UPPERCASE_CHARS + NUMBERS;
+    static final Integer LABEL_SIZE = 2;
 }
