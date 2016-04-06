@@ -21,7 +21,7 @@ import static org.junit.Assert.assertEquals;
 @RunWith(JUnitQuickcheck.class)
 public class SymmetricKeyCryptographyProperties {
 
-    @Property(shrink = false)
+    @Property(trials = 10)
     public void decryptReversesEncrypt(@From(CryptoBytesGenerator.class)Crypto.Bytes bytes, @From(CryptoBytesGenerator.class)Crypto.Bytes keybits)
             throws Exception {
 

@@ -21,7 +21,7 @@ import org.junit.runner.RunWith;
 public class FirstTreeQcTest {
 
     @Property(shrink = false)
-    public void testXXXXXXX(@From(TreeGenerator.class) Tree tree) throws Exception {
+    public void testXXXXXXX(@From(NodeGenerator.class) Tree tree) throws Exception {
 
     }
 
