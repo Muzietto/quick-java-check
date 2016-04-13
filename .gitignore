@@ -14,6 +14,7 @@ out
 *.class
 
 build
+FitNesseRoot
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
