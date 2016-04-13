@@ -1,0 +1,11 @@
+!path   M:\win\user\documents\GitHub\quick-java-check\build\classes\main
+
+!4 Story: the amount you pay determines the received credits.!
+
+|Import|
+|jukebox.fixtures|
+!|credits for payment|
+|payment|credits?|
+|.25 |1 |
+|1 |4 |
+|5 |202 |
