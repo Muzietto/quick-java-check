@@ -1,0 +1,8 @@
+!path M:\win\user\documents\GitHub\quick-java-check\build\classes\main
+!path M:\win\user\documents\GitHub\quick-java-check\build\classes\test
+
+|Import|
+|net.faustinelli.quickcheck.firstTests|
+!|CryptoFixture|
+|string|key|encrypted?|
+|"plaintext"|"mykey"|"plaintextmykey"|
