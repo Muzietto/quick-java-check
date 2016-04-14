@@ -1,0 +1,8 @@
+!path M:\win\user\documents\GitHub\quick-java-check\build\classes\main
+!path M:\win\user\documents\GitHub\quick-java-check\build\classes\test
+
+|Import|
+|com.langrsoft.app.fixtures|
+!|BookRules|
+|daily fine?|grace period?|checkout period?|
+|10|3|21|

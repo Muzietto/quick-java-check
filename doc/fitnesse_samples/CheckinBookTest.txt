@@ -1,0 +1,12 @@
+!path M:\win\user\documents\GitHub\quick-java-check\build\classes\main
+!path M:\win\user\documents\GitHub\quick-java-check\build\classes\test
+
+|Import|
+|com.langrsoft.app.fixtures|
+!|CheckinBook|
+|checkout date|due date?|checkin date|daysLate?|fine?|
+|1/12/2006|22/12/2006|22/12/2006|0|0|
+|1/12/2006|22/12/2006|23/12/2006|1|0|
+|1/12/2006|22/12/2006|25/12/2006|3|0|
+|1/12/2006|22/12/2006|26/12/2006|4|40|
+|1/12/2006|22/12/2006|27/12/2006|5|50|
