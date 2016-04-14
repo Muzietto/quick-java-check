@@ -33,7 +33,7 @@ public class TreeDepthVisitorTest extends TestCase {
         assertEquals(new Integer(1), node.accept(visitor));
     }
 
-    public void testDepthNodeOfOneLeaveIsTwo() throws Exception {
+    public void testDepthNodeOfOneLeafIsTwo() throws Exception {
         Node node = new Node(new Leaf("left"), new Empty());
         TreeDepthVisitor visitor = new TreeDepthVisitor();
         assertEquals(new Integer(2), node.accept(visitor));

@@ -33,31 +33,31 @@ public class TreeDeepestLeafVisitorTest extends TestCase {
         assertEquals("test", value(leaf.accept(visitor)));
     }
 
-    public void testDepthNodeOfEmptiesIsOne() throws Exception {
+    public void testDeepestLeafOfNodeOfEmptiesIsEmptyString() throws Exception {
         Node node = new Node(new Empty(), new Empty());
         TreeDeepestLeafVisitor visitor = new TreeDeepestLeafVisitor();
         assertEquals("", value(node.accept(visitor)));
     }
 
-    public void testDepthNodeOfOneLeaveIsTwo() throws Exception {
+    public void testDeepestLeafOfOneLeafIsThatLeaf() throws Exception {
         Node node = new Node(new Leaf("left"), new Empty());
         TreeDeepestLeafVisitor visitor = new TreeDeepestLeafVisitor();
         assertEquals("left", value(node.accept(visitor)));
     }
 
-    public void testDepthNodeOfTwoLeavesIsTwo() throws Exception {
+    public void testDeepestLeafOfNodeOfTwoLeavesIsLeftLeaf() throws Exception {
         Node node = new Node(new Leaf("left"), new Leaf("right"));
         TreeDeepestLeafVisitor visitor = new TreeDeepestLeafVisitor();
         assertEquals("left", value(visitor.visit(node)));
     }
 
-    public void testDepthNodeOfNodeOfLeavesIsThree() throws Exception {
+    public void testDeepestLeafOfNodeOfNodeOfLeavesDepends() throws Exception {
         Node node = new Node(new Leaf("left"), new Node(new Leaf("left2"), new Leaf("right2")));
         TreeDeepestLeafVisitor visitor = new TreeDeepestLeafVisitor();
         assertEquals("left2", value(visitor.visit(node)));
     }
 
-    public void testComplexTree() throws Exception {
+    public void testDeepestLeafOfComplexTreeDepends() throws Exception {
         Node node = new Node(new Leaf("left"), new Node(new Node(new Leaf("left3"), new Leaf("right3")), new Leaf("right2")));
         TreeDeepestLeafVisitor visitor = new TreeDeepestLeafVisitor();
         assertEquals("left3", value(visitor.visit(node)));
