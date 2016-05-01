@@ -19,7 +19,7 @@ import static org.junit.Assert.assertTrue;
  */
 @RunWith(JUnitQuickcheck.class)
 public class Numbers {
-    @Property (shrink = true)
+    @Property (shrink = false)
     public void holds(@Positive int i) {
         assertTrue(i > 0);
     }
