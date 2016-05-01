@@ -20,6 +20,7 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.+'
+    compile 'org.fitnesse:fitnesse:20151230'
     compile 'com.pholser:junit-quickcheck-core:0.6'
     compile 'com.pholser:junit-quickcheck-generators:0.6'
 }
