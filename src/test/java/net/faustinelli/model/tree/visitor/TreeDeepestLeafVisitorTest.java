@@ -15,6 +15,7 @@ import java.util.AbstractMap;
 /**
  * Created by Marco Faustinelli (Muzietto) on 04/04/2016.
  */
+@SuppressWarnings("unchecked")
 public class TreeDeepestLeafVisitorTest extends TestCase {
 
     private String value(Object result) {
