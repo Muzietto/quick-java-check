@@ -11,10 +11,12 @@ package net.faustinelli.quickcheck.positive;
 import com.pholser.junit.quickcheck.generator.GeneratorConfiguration;
 
 import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
  * Created by Marco Faustinelli (Muzietto) on 01/05/2016.
  */
+@Retention(RetentionPolicy.RUNTIME)
 @GeneratorConfiguration
 public @interface Positive {}

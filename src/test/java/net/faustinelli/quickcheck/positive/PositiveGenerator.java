@@ -20,12 +20,8 @@ import java.util.List;
 public class PositiveGenerator extends Generator<Integer> {
     private Positive positive;
 
-    protected PositiveGenerator(Class<Integer> type) {
-        super(type);
-    }
-
-    protected PositiveGenerator(List<Class<Integer>> types) {
-        super(types);
+    public PositiveGenerator() {
+        super(Integer.class);
     }
 
     @Override

@@ -8,6 +8,7 @@
 
 package net.faustinelli.quickcheck.positive;
 
+import com.pholser.junit.quickcheck.From;
 import com.pholser.junit.quickcheck.Property;
 import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
 import org.junit.runner.RunWith;
@@ -19,8 +20,8 @@ import static org.junit.Assert.assertTrue;
  */
 @RunWith(JUnitQuickcheck.class)
 public class Numbers {
-    @Property (shrink = false, trials = 150)
-    public void holds(@Positive int i) {
+    @Property
+    public void holds(@From(PositiveGenerator.class) @Positive int i) {
         assertTrue(i > 0);
     }
 }
