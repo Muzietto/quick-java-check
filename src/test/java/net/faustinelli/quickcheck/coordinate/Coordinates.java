@@ -14,21 +14,17 @@ import com.pholser.junit.quickcheck.random.SourceOfRandomness;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.List;
 
 /**
  * http://pholser.github.io/junit-quickcheck/site/0.6/usage/sample-size.html
  */
 public class Coordinates extends Generator<Coordinate> {
-    protected Coordinates(Class<Coordinate> type) {
-        super(type);
+    public Coordinates() {
+        super(Coordinate.class);
     }
 
-    protected Coordinates(List<Class<Coordinate>> types) {
-        super(types);
-    }
-
-    @Override public Coordinate generate(
+    @Override
+    public Coordinate generate(
             SourceOfRandomness random,
             GenerationStatus status) {
 
