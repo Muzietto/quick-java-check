@@ -29,5 +29,4 @@ public class CryptoFixture extends ColumnFixture {
         }
         return "exception!";
     }
-
 }

@@ -20,6 +20,7 @@ import java.util.List;
 public class PositiveGenerator extends Generator<Integer> {
     private Positive positive;
 
+    // NB: every custom generator needs a no-args constructor!
     public PositiveGenerator() {
         super(Integer.class);
     }
